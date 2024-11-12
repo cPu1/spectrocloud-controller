@@ -1,0 +1,27 @@
+# permissions for end users to edit clusteredgenatives.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: sc
+    app.kubernetes.io/managed-by: kustomize
+  name: clusteredgenative-editor-role
+rules:
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteredgenatives
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteredgenatives/status
+  verbs:
+  - get

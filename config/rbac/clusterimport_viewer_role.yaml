@@ -1,0 +1,23 @@
+# permissions for end users to view clusterimports.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: sc
+    app.kubernetes.io/managed-by: kustomize
+  name: clusterimport-viewer-role
+rules:
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterimports
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterimports/status
+  verbs:
+  - get

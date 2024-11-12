@@ -1,0 +1,111 @@
+resources:
+# All RBAC will be applied under this service account in
+# the deployment namespace. You may comment out this resource
+# if your manager will use a service account that exists at
+# runtime. Be sure to update RoleBinding and ClusterRoleBinding
+# subjects if changing service account names.
+- service_account.yaml
+- role.yaml
+- role_binding.yaml
+- leader_election_role.yaml
+- leader_election_role_binding.yaml
+# The following RBAC configurations are used to protect
+# the metrics endpoint with authn/authz. These configurations
+# ensure that only authorized users and service accounts
+# can access the metrics endpoint. Comment the following
+# permissions if you want to disable this protection.
+# More info: https://book.kubebuilder.io/reference/metrics.html
+- metrics_auth_role.yaml
+- metrics_auth_role_binding.yaml
+- metrics_reader_role.yaml
+# For each CRD, "Editor" and "Viewer" roles are scaffolded by
+# default, aiding admins in cluster management. Those roles are
+# not used by the Project itself. You can comment the following lines
+# if you do not want those helpers be installed with your Project.
+- filter_editor_role.yaml
+- filter_viewer_role.yaml
+- applicationprofile_editor_role.yaml
+- applicationprofile_viewer_role.yaml
+- privatecloudgatewaydnsmap_editor_role.yaml
+- privatecloudgatewaydnsmap_viewer_role.yaml
+- project_editor_role.yaml
+- project_viewer_role.yaml
+- cloudaccounttencent_editor_role.yaml
+- cloudaccounttencent_viewer_role.yaml
+- addondeployment_editor_role.yaml
+- addondeployment_viewer_role.yaml
+- clusterazure_editor_role.yaml
+- clusterazure_viewer_role.yaml
+- clusteraws_editor_role.yaml
+- clusteraws_viewer_role.yaml
+- cloudaccountmaas_editor_role.yaml
+- cloudaccountmaas_viewer_role.yaml
+- virtualcluster_editor_role.yaml
+- virtualcluster_viewer_role.yaml
+- cloudaccountvsphere_editor_role.yaml
+- cloudaccountvsphere_viewer_role.yaml
+- cloudaccountazure_editor_role.yaml
+- cloudaccountazure_viewer_role.yaml
+- clustertke_editor_role.yaml
+- clustertke_viewer_role.yaml
+- clustereks_editor_role.yaml
+- clustereks_viewer_role.yaml
+- cloudaccountopenstack_editor_role.yaml
+- cloudaccountopenstack_viewer_role.yaml
+- privatecloudgatewayippool_editor_role.yaml
+- privatecloudgatewayippool_viewer_role.yaml
+- clusteredgenative_editor_role.yaml
+- clusteredgenative_viewer_role.yaml
+- registryhelm_editor_role.yaml
+- registryhelm_viewer_role.yaml
+- backupstoragelocation_editor_role.yaml
+- backupstoragelocation_viewer_role.yaml
+- clustermaas_editor_role.yaml
+- clustermaas_viewer_role.yaml
+- clusterprofile_editor_role.yaml
+- clusterprofile_viewer_role.yaml
+- clustercustomcloud_editor_role.yaml
+- clustercustomcloud_viewer_role.yaml
+- clustergroup_editor_role.yaml
+- clustergroup_viewer_role.yaml
+- cloudaccountgcp_editor_role.yaml
+- cloudaccountgcp_viewer_role.yaml
+- clusteraks_editor_role.yaml
+- clusteraks_viewer_role.yaml
+- clustergke_editor_role.yaml
+- clustergke_viewer_role.yaml
+- cloudaccountcustom_editor_role.yaml
+- cloudaccountcustom_viewer_role.yaml
+- macro_editor_role.yaml
+- macro_viewer_role.yaml
+- alert_editor_role.yaml
+- alert_viewer_role.yaml
+- appliance_editor_role.yaml
+- appliance_viewer_role.yaml
+- registryoci_editor_role.yaml
+- registryoci_viewer_role.yaml
+- clusterimport_editor_role.yaml
+- clusterimport_viewer_role.yaml
+- clustervsphere_editor_role.yaml
+- clustervsphere_viewer_role.yaml
+- sshkey_editor_role.yaml
+- sshkey_viewer_role.yaml
+- application_editor_role.yaml
+- application_viewer_role.yaml
+- macros_editor_role.yaml
+- macros_viewer_role.yaml
+- workspace_editor_role.yaml
+- workspace_viewer_role.yaml
+- clusteredgevsphere_editor_role.yaml
+- clusteredgevsphere_viewer_role.yaml
+- clusterprofileimport_editor_role.yaml
+- clusterprofileimport_viewer_role.yaml
+- team_editor_role.yaml
+- team_viewer_role.yaml
+- clusteropenstack_editor_role.yaml
+- clusteropenstack_viewer_role.yaml
+- clustergcp_editor_role.yaml
+- clustergcp_viewer_role.yaml
+- cloudaccountaws_editor_role.yaml
+- cloudaccountaws_viewer_role.yaml
+

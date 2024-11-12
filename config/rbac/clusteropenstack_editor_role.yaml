@@ -1,0 +1,27 @@
+# permissions for end users to edit clusteropenstacks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: sc
+    app.kubernetes.io/managed-by: kustomize
+  name: clusteropenstack-editor-role
+rules:
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteropenstacks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteropenstacks/status
+  verbs:
+  - get

@@ -1,0 +1,23 @@
+# permissions for end users to view clusteropenstacks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: sc
+    app.kubernetes.io/managed-by: kustomize
+  name: clusteropenstack-viewer-role
+rules:
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteropenstacks
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteropenstacks/status
+  verbs:
+  - get

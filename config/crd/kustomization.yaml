@@ -1,0 +1,106 @@
+# This kustomization.yaml is not intended to be run by itself,
+# since it depends on service name and namespace that are out of this kustomize package.
+# It should be run by config/default
+resources:
+- bases/spectrocloud.spectrocloud.com_clusterazures.yaml
+- bases/spectrocloud.spectrocloud.com_clusteropenstacks.yaml
+- bases/spectrocloud.spectrocloud.com_registryocis.yaml
+- bases/spectrocloud.spectrocloud.com_sshkeys.yaml
+- bases/spectrocloud.spectrocloud.com_teams.yaml
+- bases/spectrocloud.spectrocloud.com_filters.yaml
+- bases/spectrocloud.spectrocloud.com_cloudaccountaws.yaml
+- bases/spectrocloud.spectrocloud.com_privatecloudgatewayippools.yaml
+- bases/spectrocloud.spectrocloud.com_cloudaccountopenstacks.yaml
+- bases/spectrocloud.spectrocloud.com_clusteredgevspheres.yaml
+- bases/spectrocloud.spectrocloud.com_clusterimports.yaml
+- bases/spectrocloud.spectrocloud.com_macros.yaml
+- bases/spectrocloud.spectrocloud.com_clusterprofiles.yaml
+- bases/spectrocloud.spectrocloud.com_clusterprofileimports.yaml
+- bases/spectrocloud.spectrocloud.com_cloudaccounttencents.yaml
+- bases/spectrocloud.spectrocloud.com_workspaces.yaml
+- bases/spectrocloud.spectrocloud.com_applications.yaml
+- bases/spectrocloud.spectrocloud.com_clusteraws.yaml
+- bases/spectrocloud.spectrocloud.com_clustermaas.yaml
+- bases/spectrocloud.spectrocloud.com_cloudaccountvspheres.yaml
+- bases/spectrocloud.spectrocloud.com_clusteredgenatives.yaml
+- bases/spectrocloud.spectrocloud.com_alerts.yaml
+- bases/spectrocloud.spectrocloud.com_clustertkes.yaml
+- bases/spectrocloud.spectrocloud.com_clustergroups.yaml
+- bases/spectrocloud.spectrocloud.com_backupstoragelocations.yaml
+- bases/spectrocloud.spectrocloud.com_registryhelms.yaml
+- bases/spectrocloud.spectrocloud.com_macroes.yaml
+- bases/spectrocloud.spectrocloud.com_applicationprofiles.yaml
+- bases/spectrocloud.spectrocloud.com_clustergkes.yaml
+- bases/spectrocloud.spectrocloud.com_addondeployments.yaml
+- bases/spectrocloud.spectrocloud.com_cloudaccountgcps.yaml
+- bases/spectrocloud.spectrocloud.com_privatecloudgatewaydnsmaps.yaml
+- bases/spectrocloud.spectrocloud.com_projects.yaml
+- bases/spectrocloud.spectrocloud.com_cloudaccountcustoms.yaml
+- bases/spectrocloud.spectrocloud.com_clustercustomclouds.yaml
+- bases/spectrocloud.spectrocloud.com_clusteraks.yaml
+- bases/spectrocloud.spectrocloud.com_clustervspheres.yaml
+- bases/spectrocloud.spectrocloud.com_virtualclusters.yaml
+- bases/spectrocloud.spectrocloud.com_appliances.yaml
+- bases/spectrocloud.spectrocloud.com_cloudaccountmaas.yaml
+- bases/spectrocloud.spectrocloud.com_clustereks.yaml
+- bases/spectrocloud.spectrocloud.com_cloudaccountazures.yaml
+- bases/spectrocloud.spectrocloud.com_clustergcps.yaml
+# +kubebuilder:scaffold:crdkustomizeresource
+
+patches:
+# [WEBHOOK] To enable webhook, uncomment all the sections with [WEBHOOK] prefix.
+# patches here are for enabling the conversion webhook for each CRD
+# +kubebuilder:scaffold:crdkustomizewebhookpatch
+
+# [CERTMANAGER] To enable cert-manager, uncomment all the sections with [CERTMANAGER] prefix.
+# patches here are for enabling the CA injection for each CRD
+#- path: patches/cainjection_in_clusterazures.yaml
+#- path: patches/cainjection_in_clusteropenstacks.yaml
+#- path: patches/cainjection_in_registryocis.yaml
+#- path: patches/cainjection_in_sshkeys.yaml
+#- path: patches/cainjection_in_teams.yaml
+#- path: patches/cainjection_in_filters.yaml
+#- path: patches/cainjection_in_cloudaccountaws.yaml
+#- path: patches/cainjection_in_privatecloudgatewayippools.yaml
+#- path: patches/cainjection_in_cloudaccountopenstacks.yaml
+#- path: patches/cainjection_in_clusteredgevspheres.yaml
+#- path: patches/cainjection_in_clusterimports.yaml
+#- path: patches/cainjection_in_macros.yaml
+#- path: patches/cainjection_in_clusterprofiles.yaml
+#- path: patches/cainjection_in_clusterprofileimports.yaml
+#- path: patches/cainjection_in_cloudaccounttencents.yaml
+#- path: patches/cainjection_in_workspaces.yaml
+#- path: patches/cainjection_in_applications.yaml
+#- path: patches/cainjection_in_clusteraws.yaml
+#- path: patches/cainjection_in_clustermaas.yaml
+#- path: patches/cainjection_in_cloudaccountvspheres.yaml
+#- path: patches/cainjection_in_clusteredgenatives.yaml
+#- path: patches/cainjection_in_alerts.yaml
+#- path: patches/cainjection_in_clustertkes.yaml
+#- path: patches/cainjection_in_clustergroups.yaml
+#- path: patches/cainjection_in_backupstoragelocations.yaml
+#- path: patches/cainjection_in_registryhelms.yaml
+#- path: patches/cainjection_in_macroes.yaml
+#- path: patches/cainjection_in_applicationprofiles.yaml
+#- path: patches/cainjection_in_clustergkes.yaml
+#- path: patches/cainjection_in_addondeployments.yaml
+#- path: patches/cainjection_in_cloudaccountgcps.yaml
+#- path: patches/cainjection_in_privatecloudgatewaydnsmaps.yaml
+#- path: patches/cainjection_in_projects.yaml
+#- path: patches/cainjection_in_cloudaccountcustoms.yaml
+#- path: patches/cainjection_in_clustercustomclouds.yaml
+#- path: patches/cainjection_in_clusteraks.yaml
+#- path: patches/cainjection_in_clustervspheres.yaml
+#- path: patches/cainjection_in_virtualclusters.yaml
+#- path: patches/cainjection_in_appliances.yaml
+#- path: patches/cainjection_in_cloudaccountmaas.yaml
+#- path: patches/cainjection_in_clustereks.yaml
+#- path: patches/cainjection_in_cloudaccountazures.yaml
+#- path: patches/cainjection_in_clustergcps.yaml
+# +kubebuilder:scaffold:crdkustomizecainjectionpatch
+
+# [WEBHOOK] To enable webhook, uncomment the following section
+# the following config is for teaching kustomize how to do kustomization for CRDs.
+
+#configurations:
+#- kustomizeconfig.yaml

@@ -1,0 +1,23 @@
+# permissions for end users to view cloudaccountcustoms.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: sc
+    app.kubernetes.io/managed-by: kustomize
+  name: cloudaccountcustom-viewer-role
+rules:
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountcustoms
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountcustoms/status
+  verbs:
+  - get

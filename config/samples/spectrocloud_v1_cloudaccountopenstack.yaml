@@ -1,0 +1,9 @@
+apiVersion: spectrocloud.spectrocloud.com/v1
+kind: CloudaccountOpenstack
+metadata:
+  labels:
+    app.kubernetes.io/name: sc
+    app.kubernetes.io/managed-by: kustomize
+  name: cloudaccountopenstack-sample
+spec:
+  # TODO(user): Add fields here

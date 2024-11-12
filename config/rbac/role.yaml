@@ -1,0 +1,1124 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - addondeployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - addondeployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - addondeployments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - alerts
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - alerts/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - alerts/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - appliances
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - appliances/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - appliances/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - applicationprofiles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - applicationprofiles/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - applicationprofiles/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - applications
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - applications/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - applications/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - backupstoragelocations
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - backupstoragelocations/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - backupstoragelocations/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountaws
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountaws/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountaws/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountazures
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountazures/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountazures/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountcustoms
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountcustoms/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountcustoms/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountgcps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountgcps/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountgcps/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountmaas
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountmaas/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountmaas/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountopenstacks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountopenstacks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountopenstacks/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccounttencents
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccounttencents/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccounttencents/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountvspheres
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountvspheres/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - cloudaccountvspheres/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteraks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteraks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteraks/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteraws
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteraws/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteraws/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterazures
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterazures/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterazures/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustercustomclouds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustercustomclouds/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustercustomclouds/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteredgenatives
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteredgenatives/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteredgenatives/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteredgevspheres
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteredgevspheres/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteredgevspheres/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustereks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustereks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustereks/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergcps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergcps/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergcps/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergkes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergkes/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergkes/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergroups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergroups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustergroups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterimports
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterimports/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterimports/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustermaas
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustermaas/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustermaas/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteropenstacks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteropenstacks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusteropenstacks/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterprofileimports
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterprofileimports/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterprofileimports/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterprofiles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterprofiles/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clusterprofiles/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustertkes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustertkes/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustertkes/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustervspheres
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustervspheres/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - clustervspheres/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - filters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - filters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - filters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - macroes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - macroes/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - macroes/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - macros
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - macros/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - macros/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - privatecloudgatewaydnsmaps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - privatecloudgatewaydnsmaps/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - privatecloudgatewaydnsmaps/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - privatecloudgatewayippools
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - privatecloudgatewayippools/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - privatecloudgatewayippools/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - projects
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - projects/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - projects/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - registryhelms
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - registryhelms/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - registryhelms/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - registryocis
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - registryocis/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - registryocis/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - sshkeys
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - sshkeys/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - sshkeys/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - teams
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - teams/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - teams/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - virtualclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - virtualclusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - virtualclusters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - workspaces
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - workspaces/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - spectrocloud.spectrocloud.com
+  resources:
+  - workspaces/status
+  verbs:
+  - get
+  - patch
+  - update
